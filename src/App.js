@@ -6,13 +6,14 @@ function Food({name}){
   )
 }
 
+const foodArray = [{name : "kimchi", id:1}, {name: "ramen", id:2}, {name:"kimbob", id:3}];
+
 function App() {
   return (
-    <div>
-      <h1>Hello!</h1>
-      <Food name="kimchi"/>
-      <Food name="aaa"/>
-      <Food name="bbb"/>
+    <div>      
+      {foodArray.map( food => (
+         <Food key={food.id} name={food.name}/>
+      ))}
     </div>
     
   );
