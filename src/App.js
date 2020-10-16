@@ -6,6 +6,11 @@ class App extends React.Component{
     count:0
   }
 
+  constructor(props){
+    super(props);
+    console.log("constructor");
+  }
+
   onHandleAdd = () => {
     // this.state.count += 1;
     // this.setState({count: this.state.count+1})
@@ -15,8 +20,17 @@ class App extends React.Component{
   onHandleMin = () => {
     this.setState({count: this.state.count-1})
   }
+
+  componentDidMount = () => {
+    console.log("componentDidMount");
+  }
+
+  componentDidUpdate = () => {
+    console.log("update");
+  }
   
   render(){
+    console.log("render");
   return (
     <div>
       <h1> number : {this.state.count}</h1>
